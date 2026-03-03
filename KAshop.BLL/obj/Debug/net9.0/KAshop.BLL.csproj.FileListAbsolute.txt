@@ -15,3 +15,4 @@ C:\web\back\api\KAshop\KAshop.BLL\obj\Debug\net9.0\KAshop.BLL.pdb
 C:\web\back\api\KAshop\KAshop.BLL\obj\Debug\net9.0\ref\KAshop.BLL.dll
 C:\web\back\api\KAshop\KAshop.BLL\bin\Debug\net9.0\KAshop.BLL.runtimeconfig.json
 C:\web\back\api\KAshop\KAshop.BLL\obj\Debug\net9.0\KAshop.BLL.genruntimeconfig.cache
+C:\web\back\api\KAshop\KAshop.BLL\obj\Debug\net9.0\KAshop.BLL.sourcelink.json

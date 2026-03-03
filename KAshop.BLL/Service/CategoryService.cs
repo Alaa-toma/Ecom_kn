@@ -6,6 +6,7 @@ using Mapster;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace KAshop.BLL.Service
             _ICategoryRepository = IcategRepository;
         }
 
+        // انشاء كاتيجوري جديدة
         public async Task<CategoryResponse> CreateCategory(CategoryRequest request)
         {
             // اي شرط او فحص للبيانات يتم هنا 
@@ -27,10 +29,19 @@ namespace KAshop.BLL.Service
             return category.Adapt<CategoryResponse>();
         }
 
+        //يرجع كل الكاتيجوريز
         public async Task<List<CategoryResponse>> GetAllCategories()
         {
-            var categories = await _ICategoryRepository.GetAllAsync();
+            var categories = await _ICategoryRepository.GetAllAsync(new string[] { nameof(Category.Translations) });
             return categories.Adapt< List<CategoryResponse> >(); 
         }
+
+        // يرجع كاتيجوري وحدة 
+        public async Task<CategoryResponse?> GetCategory(Expression<Func<Category, bool>> filter)
+        {
+            var category = await _ICategoryRepository.getone(filter, new string[] {nameof(Category.Translations)});
+            return category.Adapt< CategoryResponse? >();   
+        }
+
     }
 }

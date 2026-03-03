@@ -12,3 +12,4 @@ C:\web\back\api\KAshop\KAshop.DAL\obj\Debug\net9.0\refint\KAshop.DAL.dll
 C:\web\back\api\KAshop\KAshop.DAL\obj\Debug\net9.0\KAshop.DAL.pdb
 C:\web\back\api\KAshop\KAshop.DAL\obj\Debug\net9.0\KAshop.DAL.genruntimeconfig.cache
 C:\web\back\api\KAshop\KAshop.DAL\obj\Debug\net9.0\ref\KAshop.DAL.dll
+C:\web\back\api\KAshop\KAshop.DAL\obj\Debug\net9.0\KAshop.DAL.sourcelink.json

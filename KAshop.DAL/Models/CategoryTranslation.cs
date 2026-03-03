@@ -14,7 +14,7 @@ namespace KAshop.DAL.Models
         public string Language { get; set; } = "en";
 
         public int category_id { get; set; }
-        public Category category { get; set; }
+        public Category category { get; set; } = null!;
 
     }
 }
