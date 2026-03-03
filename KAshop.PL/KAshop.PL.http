@@ -1,0 +1,6 @@
+@KAshop.PL_HostAddress = http://localhost:5208
+
+GET {{KAshop.PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

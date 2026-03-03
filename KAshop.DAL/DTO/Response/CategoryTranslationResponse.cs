@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KAshop.DAL.DTO.Response
+{
+    public class CategoryTranslationResponse
+    {
+        public string Name { get; set; } = null!;
+        public string Language { get; set; } = null!;
+    }
+}
