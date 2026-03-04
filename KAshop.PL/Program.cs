@@ -1,8 +1,10 @@
 
 using KAshop.BLL.Service;
 using KAshop.DAL.Data;
+using KAshop.DAL.Models;
 using KAshop.DAL.Repository;
 using KAshop.PL.Controllers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -61,6 +63,13 @@ namespace KAshop.PL
             // objects............
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
             // .................
 
             var app = builder.Build();

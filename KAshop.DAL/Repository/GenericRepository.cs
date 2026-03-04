@@ -1,4 +1,5 @@
-﻿using KAshop.DAL.Data;
+﻿
+using KAshop.DAL.Data;
 using KAshop.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -42,7 +43,7 @@ namespace KAshop.DAL.Repository
             return await query.ToListAsync();
         }
 
-        public async Task<T> getone(Expression<Func<T, bool>> filter, string[]? includes = null)
+        public async Task<T?> getone(Expression<Func<T, bool>> filter, string[]? includes = null)
         {
 
             IQueryable<T> query = _context.Set<T>();
@@ -56,6 +57,14 @@ namespace KAshop.DAL.Repository
             }
 
             return await query.FirstOrDefaultAsync(filter);
+        }
+
+        public async Task<bool> deleteAsync(T entity)
+        {
+            _context.Remove(entity);
+            var affected = await _context.SaveChangesAsync();
+            return affected > 0;
+
         }
 
     }

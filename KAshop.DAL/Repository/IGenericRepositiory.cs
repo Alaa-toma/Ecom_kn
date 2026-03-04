@@ -14,6 +14,9 @@ namespace KAshop.DAL.Repository
         Task<List<T>> GetAllAsync(string[]? includes = null);
         Task<T> createAsync(T category);
 
-        Task<T> getone(Expression<Func<T, bool>> filter, string[]? includes = null);
+        Task<T?> getone(Expression<Func<T, bool>> filter, string[]? includes = null);
+
+        Task<bool> deleteAsync(T entity);
+
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
 
 namespace KAshop.PL.Controllers
@@ -66,6 +67,18 @@ namespace KAshop.PL.Controllers
             var category = await _ICategoryService.GetCategory(c  => c.Id == id);
 
             return Ok(category);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> delete(int id)
+        {
+            var deleted = await _ICategoryService.deleteCategory(id);
+
+            if (!deleted)
+            {
+                return NotFound(new { message = _localizer["Not Found"].Value });
+            }
+            return Ok(new { message = _localizer["Success"].Value });
         }
 
 

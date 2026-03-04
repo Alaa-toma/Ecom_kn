@@ -1,9 +1,41 @@
 [
   {
+    "ContainingType": "KAshop.PL.Controllers.AccountController",
+    "Method": "RegisteAsync",
+    "RelativePath": "api/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "KAshop.DAL.DTO.Request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KAshop.PL.Controllers.CategoryController",
     "Method": "GetById",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KAshop.PL.Controllers.CategoryController",
+    "Method": "delete",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -43,5 +43,15 @@ namespace KAshop.BLL.Service
             return category.Adapt< CategoryResponse? >();   
         }
 
+        public async Task<bool> deleteCategory(int id)
+        {
+            var client = await _ICategoryRepository.getone(i => i.Id == id);
+
+            if (client == null) return false;  // العنصر مش موجود
+
+            return await _ICategoryRepository.deleteAsync(client);
+
+        }
+
     }
 }
