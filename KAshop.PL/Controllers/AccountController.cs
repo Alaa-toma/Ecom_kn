@@ -24,5 +24,24 @@ namespace KAshop.PL.Controllers
             return Ok(result);
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> LoginAsync(LoginRequest request)
+        {
+            var result = await _authenticationService.LoginAsync(request);
+
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail()
+        {
+            return Ok(new { message = " ok" });
+        }
+
     }
 }

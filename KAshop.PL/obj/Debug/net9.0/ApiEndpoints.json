@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "KAshop.PL.Controllers.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KAshop.PL.Controllers.AccountController",
+    "Method": "LoginAsync",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "KAshop.DAL.DTO.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KAshop.PL.Controllers.AccountController",
     "Method": "RegisteAsync",
     "RelativePath": "api/Account/Register",
     "HttpMethod": "POST",

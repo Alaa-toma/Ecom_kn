@@ -1,8 +1,9 @@
-
+﻿
 using KAshop.BLL.Service;
 using KAshop.DAL.Data;
 using KAshop.DAL.Models;
 using KAshop.DAL.Repository;
+using KAshop.DAL.Utilities;
 using KAshop.PL.Controllers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -10,13 +11,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Options;
 using System.Globalization;
+using System.Threading.Tasks;
 
 namespace KAshop.PL
 {
 
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -64,11 +66,13 @@ namespace KAshop.PL
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddScoped<ISeedData, RoleSeedData>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             // .................
 
@@ -89,6 +93,19 @@ namespace KAshop.PL
 
 
             app.MapControllers();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var seeder = services.GetServices<ISeedData>();
+                // نعمل هاي الخطوة لما بدنا نعمل اوبجكت من كلاس لمرة واحدة عشان يشتغل, وخذا الاوبجكت ما رح نستخدمه في الكود
+
+                foreach (var seed in seeder)
+                {
+                    await seed.DataSeed(); // لانه في اكثر من رول فنعمل اكثرمن اوبجكت
+                }
+
+            }
 
             app.Run();
         }
