@@ -3,24 +3,35 @@
   "WorkspaceRootPath": "C:\\web\\back\\api\\KAshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|c:\\web\\back\\api\\kashop\\kashop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|solutionrelative:kashop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|c:\\web\\back\\api\\kashop\\kashop.pl\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|solutionrelative:kashop.pl\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|c:\\web\\back\\api\\kashop\\kashop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|solutionrelative:kashop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|c:\\web\\back\\api\\kashop\\kashop.pl\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|solutionrelative:kashop.pl\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\AppData\\Roaming\\Microsoft\\UserSecrets\\13671fdd-91f2-4943-968e-98c6172c015b\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|c:\\web\\back\\api\\kashop\\kashop.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E24A2B08-A4E2-4845-8564-A8AF2917B951}|KAshop.PL\\KAshop.PL.csproj|solutionrelative:kashop.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|c:\\web\\back\\api\\kashop\\kashop.bll\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD03F58B-25D4-4D5A-9462-23B988922713}|KAshop.BLL\\KAshop.BLL.csproj|solutionrelative:kashop.bll\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +41,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\EmailSender.cs",
-              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\EmailSender.cs",
-              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\EmailSender.cs*",
-              "RelativeToolTip": "KAshop.BLL\\Service\\EmailSender.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\IAuthenticationService.cs",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\IAuthenticationService.cs",
+              "RelativeToolTip": "KAshop.BLL\\Service\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAjwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T18:18:21.414Z",
+              "WhenOpened": "2026-03-11T14:08:14.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Roaming\\Microsoft\\UserSecrets\\13671fdd-91f2-4943-968e-98c6172c015b\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\DELL\\AppData\\Roaming\\Microsoft\\UserSecrets\\13671fdd-91f2-4943-968e-98c6172c015b\\secrets.json",
+              "ToolTip": "C:\\Users\\DELL\\AppData\\Roaming\\Microsoft\\UserSecrets\\13671fdd-91f2-4943-968e-98c6172c015b\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\DELL\\AppData\\Roaming\\Microsoft\\UserSecrets\\13671fdd-91f2-4943-968e-98c6172c015b\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-11T14:07:09.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "KAshop.PL\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "KAshop.PL\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T14:05:41.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "KAshop.PL\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Controllers\\AccountController.cs",
               "RelativeToolTip": "KAshop.PL\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-09T18:06:51.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\AuthenticationService.cs",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\AuthenticationService.cs",
+              "RelativeToolTip": "KAshop.BLL\\Service\\AuthenticationService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T23:39:13.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Program.cs",
               "RelativeDocumentMoniker": "KAshop.PL\\Program.cs",
-              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Program.cs",
-              "RelativeToolTip": "KAshop.PL\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwEoAAABdAAAAAAAAAA==",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\Program.cs*",
+              "RelativeToolTip": "KAshop.PL\\Program.cs*",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAQwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-09T15:41:23.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEmailSender.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\IEmailSender.cs",
-              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\IEmailSender.cs",
-              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\IEmailSender.cs",
-              "RelativeToolTip": "KAshop.BLL\\Service\\IEmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T15:03:37.236Z"
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "KAshop.PL\\appsettings.Development.json",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.PL\\appsettings.Development.json",
+              "RelativeToolTip": "KAshop.PL\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-11T14:01:13.498Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\AuthenticationService.cs",
-              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\AuthenticationService.cs",
-              "RelativeToolTip": "KAshop.BLL\\Service\\AuthenticationService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\EmailSender.cs",
+              "RelativeDocumentMoniker": "KAshop.BLL\\Service\\EmailSender.cs",
+              "ToolTip": "C:\\web\\back\\api\\KAshop\\KAshop.BLL\\Service\\EmailSender.cs",
+              "RelativeToolTip": "KAshop.BLL\\Service\\EmailSender.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T23:39:13.839Z",
+              "WhenOpened": "2026-03-09T18:18:21.414Z",
               "EditorCaption": ""
             }
           ]

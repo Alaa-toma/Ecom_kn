@@ -35,7 +35,9 @@ namespace KAshop.BLL.Service
             await _UserManager.AddToRoleAsync(user, "User");
 
             var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
-            var EmailUrl = $"https://localhost:7136/api/Account/ConfirmEmail?token={token}";
+            token = Uri.EscapeDataString(token);
+
+            var EmailUrl = $"https://localhost:7136/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
             // للتاكد انه الي دخل على الصفحة وصلته رسالة عالايميل, مش حدت عشوائي استخدم الرابط
 
             await _EmailSender.SendEmailAsync(user.Email, "welcom", $"<h1> welcom {request.UserName} </h1>" + "  "
@@ -53,6 +55,13 @@ namespace KAshop.BLL.Service
             {
                 return new LoginResponse() { Success = false, Message = "Invalid Email" };
             }
+
+            if (!await _UserManager.IsEmailConfirmedAsync(user))
+            {
+                return new LoginResponse() { Success = false, Message = "Email is not confirmed" };
+            }
+
+
             var result = await _UserManager.CheckPasswordAsync(user, request.Password);
 
             if (!result)
@@ -61,6 +70,19 @@ namespace KAshop.BLL.Service
             }
 
             return new LoginResponse() { Success = true, Message = "succcess" };
+
+        }
+
+        public async Task<bool> ConfirmEmailAsync(string token, string UserId)
+        {
+            var user = await _UserManager.FindByIdAsync(UserId);
+            if (user == null) { return false; }
+
+            var result = await _UserManager.ConfirmEmailAsync(user, token);
+
+            if (!result.Succeeded) { return false; }
+
+            return true;
 
         }
     }

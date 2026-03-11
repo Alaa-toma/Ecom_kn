@@ -7,6 +7,7 @@ using KAshop.DAL.Models;
 using KAshop.DAL.Repository;
 using KAshop.PL.Resources;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +35,7 @@ namespace KAshop.PL.Controllers
 
 
         [HttpPost("create")]
-
+        [Authorize]
         public async Task<IActionResult> create(CategoryRequest request )
         {
             var response = await _ICategoryService.CreateCategory(request);

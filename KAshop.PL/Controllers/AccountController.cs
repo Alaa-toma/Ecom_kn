@@ -24,6 +24,7 @@ namespace KAshop.PL.Controllers
             return Ok(result);
         }
 
+
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync(LoginRequest request)
         {
@@ -37,10 +38,14 @@ namespace KAshop.PL.Controllers
             return Ok(result);
         }
 
+
         [HttpGet("ConfirmEmail")]
-        public async Task<IActionResult> ConfirmEmail()
+        public async Task<IActionResult> ConfirmEmail(string token, string UserId)
         {
-            return Ok(new { message = " ok" });
+            var isConfirmed = _authenticationService.ConfirmEmailAsync(token, UserId);
+
+            if (isConfirmed.IsCompletedSuccessfully) { return Ok(); }
+            return BadRequest();
         }
 
     }
