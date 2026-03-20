@@ -36,6 +36,12 @@ namespace KAshop.DAL.Data
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
 
 
+            foreach (var relationship in builder.Model.GetEntityTypes()
+        .SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.NoAction;
+            }
+
         }
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)

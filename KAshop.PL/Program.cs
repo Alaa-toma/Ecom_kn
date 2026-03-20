@@ -6,6 +6,7 @@ using KAshop.DAL.Repository;
 using KAshop.DAL.Utilities;
 using KAshop.PL.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
@@ -42,7 +43,18 @@ namespace KAshop.PL
 
             });
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
+
+            //which front end can use?
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                                  });
+            });
 
 
             builder.Services.AddLocalization(options => options.ResourcesPath = "");
@@ -72,11 +84,20 @@ namespace KAshop.PL
             builder.Services.AddScoped<ISeedData, RoleSeedData>();
             builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {
                 Options.User.RequireUniqueEmail = true;
+
+                Options.Password.RequireDigit = true;
+                Options.Password.RequireLowercase = true;
+                Options.Password.RequireUppercase = true;
+                Options.Password.RequireNonAlphanumeric = true;
+                Options.Password.RequiredLength = 8;
+
+                Options.Lockout.MaxFailedAccessAttempts = 4; // 4 محاولات خطأ ينعمل حظر لليوزر مدة معينة
+                Options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(4); // مدة الحظر
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
@@ -119,7 +140,7 @@ namespace KAshop.PL
             app.UseAuthentication();
             app.UseAuthorization();
 
-
+            app.UseCors(MyAllowSpecificOrigins);
             app.MapControllers();
 
             using (var scope = app.Services.CreateScope())

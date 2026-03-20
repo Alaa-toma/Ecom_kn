@@ -2,6 +2,7 @@
 using KAshop.DAL.DTO.Response;
 using KAshop.DAL.Models;
 using Mapster;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -20,14 +21,16 @@ namespace KAshop.BLL.Service
         private readonly UserManager<ApplicationUser> _UserManager;
         private readonly IEmailSender _EmailSender;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public AuthenticationService(UserManager<ApplicationUser> UserManager,
            IEmailSender emailSender, 
-           IConfiguration configuration)
+           IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             _UserManager = UserManager;
             _EmailSender = emailSender;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<RegisterResponse> RegisterAsync(RegisterRequest request)
@@ -45,7 +48,7 @@ namespace KAshop.BLL.Service
             var token = await _UserManager.GenerateEmailConfirmationTokenAsync(user);
             token = Uri.EscapeDataString(token);
 
-            var EmailUrl = $"https://localhost:7136/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
+            var EmailUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/api/Account/ConfirmEmail?token={token}&userid={user.Id}";
             // للتاكد انه الي دخل على الصفحة وصلته رسالة عالايميل, مش حدت عشوائي استخدم الرابط
 
             await _EmailSender.SendEmailAsync(user.Email, "welcom", $"<h1> welcom {request.UserName} </h1>" + "  "

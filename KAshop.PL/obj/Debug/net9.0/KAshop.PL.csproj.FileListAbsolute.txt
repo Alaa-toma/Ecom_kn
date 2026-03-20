@@ -83,7 +83,6 @@ C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.build.json
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.development.json
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\KAshop.PL.csproj.Up2Date
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\KAshop.PL.dll
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\refint\KAshop.PL.dll
@@ -181,3 +180,4 @@ C:\web\back\api\KAshop\KAshop.PL\bin\Debug\net9.0\Mapster.dll
 C:\web\back\api\KAshop\KAshop.PL\bin\Debug\net9.0\Mapster.Core.dll
 C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\KAshop.PL.sourcelink.json
 C:\web\back\api\KAshop\KAshop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\web\back\api\KAshop\KAshop.PL\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

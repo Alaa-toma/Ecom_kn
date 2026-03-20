@@ -95,7 +95,25 @@ namespace KAshop.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("createdById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("createdOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("updatedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("updatedOn")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("createdById");
+
+                    b.HasIndex("updatedById");
 
                     b.ToTable("Categories");
                 });
@@ -262,12 +280,31 @@ namespace KAshop.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("KAshop.DAL.Models.Category", b =>
+                {
+                    b.HasOne("KAshop.DAL.Models.ApplicationUser", "createdBy")
+                        .WithMany()
+                        .HasForeignKey("createdById")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("KAshop.DAL.Models.ApplicationUser", "updatedBy")
+                        .WithMany()
+                        .HasForeignKey("updatedById")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("createdBy");
+
+                    b.Navigation("updatedBy");
+                });
+
             modelBuilder.Entity("KAshop.DAL.Models.CategoryTranslation", b =>
                 {
                     b.HasOne("KAshop.DAL.Models.Category", "category")
                         .WithMany("Translations")
                         .HasForeignKey("categoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("category");
@@ -278,7 +315,7 @@ namespace KAshop.DAL.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -287,7 +324,7 @@ namespace KAshop.DAL.Migrations
                     b.HasOne("KAshop.DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -296,7 +333,7 @@ namespace KAshop.DAL.Migrations
                     b.HasOne("KAshop.DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -305,13 +342,13 @@ namespace KAshop.DAL.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("KAshop.DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -320,7 +357,7 @@ namespace KAshop.DAL.Migrations
                     b.HasOne("KAshop.DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
